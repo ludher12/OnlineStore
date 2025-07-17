@@ -1,0 +1,20 @@
+﻿@model List<OnlineStore.Domain.Models.Curso>
+
+<h1>Listado de cursos </h1>
+
+@if (!Model.Any())
+
+{
+    <p>No hay cursos disponibles.</p>
+}
+
+else
+{
+    @foreach (var curso in Model)
+    {
+        <p>@curso.Nombre</p>
+        <br />
+        <p>@curso.Descripcion </p>
+    }
+
+}
